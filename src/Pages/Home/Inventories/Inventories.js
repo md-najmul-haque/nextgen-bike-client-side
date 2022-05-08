@@ -11,7 +11,7 @@ const Inventories = () => {
             <h1 className='section-title'>Our Products</h1>
             <div className='row g-5'>
                 {
-                    inventories.map(inventory => <Inventory key={inventory.id} inventory={inventory}></Inventory>)
+                    inventories.map(inventory => <Inventory key={inventory.id} inventory={inventory}></Inventory>).slice(0, 6)
                 }
             </div>
             <button className='button-style mb-4'>Manage Item</button>
