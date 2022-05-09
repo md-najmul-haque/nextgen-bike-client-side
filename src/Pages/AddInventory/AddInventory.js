@@ -14,7 +14,7 @@ const AddInventory = () => {
 
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = data => {
+    const onSubmit = (data, e) => {
         const newData = { ...data, email };
         const url = `http://localhost:5000/inventory`;
         fetch(url, {
@@ -28,6 +28,7 @@ const AddInventory = () => {
             .then(result => {
                 console.log(result);
             })
+        e.target.reset();
     };
     return (
         <div className='w-50 mx-auto'>
