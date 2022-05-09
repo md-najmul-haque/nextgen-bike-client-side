@@ -16,8 +16,25 @@ const ManageInventories = () => {
         navigate(`/addinventory`)
     }
 
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure? Do you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = inventories.filter(inventory => inventory._id !== id);
+                    setInventories(remaining);
+                });
+        }
+
+    }
+
     return (
-        <div id='manageinventories'>
+        <div>
             <h2 className='section-title'>Our All Items</h2>
             <div className='row'>
                 {
@@ -36,7 +53,7 @@ const ManageInventories = () => {
                                 <p>In stock: {inventory.quantity}</p>
                                 <p>Sold: {inventory.sold}</p>
                                 <button onClick={() => navigateToUpdate(inventory._id)} className='button-style'>Update</button>
-                                <button className='button-style'>Delete</button>
+                                <button onClick={() => handleDelete(inventory._id)} className='button-style'>Delete</button>
                             </div>
                         </div>
                     </div>)
