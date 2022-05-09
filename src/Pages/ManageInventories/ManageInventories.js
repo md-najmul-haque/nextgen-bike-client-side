@@ -12,8 +12,12 @@ const ManageInventories = () => {
         navigate(`/inventory/${id}`)
     }
 
+    const handleAddInventory = () => {
+        navigate(`/addinventory`)
+    }
+
     return (
-        <div>
+        <div id='manageinventories'>
             <h2 className='section-title'>Our All Items</h2>
             <div className='row'>
                 {
@@ -39,7 +43,7 @@ const ManageInventories = () => {
                 }
             </div>
             <div>
-                <button className='button-style'>Add New Item</button>
+                <button onClick={handleAddInventory} className='button-style'>Add New Item</button>
             </div>
         </div>
 

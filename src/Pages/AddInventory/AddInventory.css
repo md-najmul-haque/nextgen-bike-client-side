@@ -1,0 +1,18 @@
+.new-item-welcome-text {
+    color: #1c3766;
+}
+
+.from-input input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.from-input input:focus {
+    border-color: #3066c5;
+    box-shadow: 0 0 8px 0 #1c3766;
+}
