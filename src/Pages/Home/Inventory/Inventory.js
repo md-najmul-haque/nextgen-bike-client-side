@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Inventory.css';
 
@@ -24,7 +23,7 @@ const Inventory = ({ inventory }) => {
                     <p className="card-text">
                         Product Description: {description}
                     </p>
-                    <Card.Text>Brand:{brand}</Card.Text>
+                    <p>Brand:{brand}</p>
                     <p>Size: {size}</p>
                     <p>price: ${price}</p>
                     <p>In stock: {quantity}</p>
