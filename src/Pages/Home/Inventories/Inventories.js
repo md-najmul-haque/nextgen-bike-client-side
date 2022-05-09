@@ -9,7 +9,7 @@ const Inventories = () => {
     const navigate = useNavigate()
 
     const navigateToManageInventory = () => {
-        navigate('/ManageInventory')
+        navigate('/ManageInventories')
     }
     return (
         <div>
