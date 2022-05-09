@@ -1,20 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
 import Inventory from '../Inventory/Inventory'
 import './Inventories.css'
 
-
 const Inventories = () => {
     const [inventories, setInventories] = useInventories()
+    const navigate = useNavigate()
+
+    const navigateToManageInventory = () => {
+        navigate('/ManageInventory')
+    }
     return (
         <div>
             <h1 className='section-title'>Our Products</h1>
             <div className='row g-5'>
                 {
-                    inventories.map(inventory => <Inventory key={inventory.id} inventory={inventory}></Inventory>).slice(0, 6)
+                    inventories.slice(0, 6).map(inventory => <Inventory key={inventory._id} inventory={inventory}></Inventory>)
                 }
             </div>
-            <button className='button-style mb-4'>Manage Item</button>
+            <button onClick={navigateToManageInventory} className='button-style'>Manage Inventory</button>
         </div>
     );
 };

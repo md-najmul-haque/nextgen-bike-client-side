@@ -61,7 +61,7 @@ const Register = () => {
 
                 <button disabled={!agree} className='button-style' type="submit">Login</button>
             </Form>
-            <p className='text-center  mt-3'>Already registered? <Link to='/login' className='text-decoration-none'>Login</Link></p>
+            <p className='text-center'>Already registered? <Link to='/login' className='text-decoration-none'>Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );

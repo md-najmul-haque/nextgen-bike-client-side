@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import google from '../../../images/socialLogin/logo/google.png'
 import './SocialLogin.css'
 
-
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
@@ -34,7 +33,7 @@ const SocialLogin = () => {
             <div>
                 <button
                     onClick={() => signInWithGoogle()}
-                    className=' button-style mx-auto my-2'>
+                    className=' button-style mx-auto'>
                     <img style={{ width: '30px' }} src={google} alt="" />
                     <span className='px-2'>Google Sign In</span>
                 </button>
