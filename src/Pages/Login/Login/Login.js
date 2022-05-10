@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -36,6 +36,7 @@ const Login = () => {
     }
 
     let from = location.state?.from?.pathname || "/";
+    let loginError;
 
     const navigateRegister = () => {
         navigate('/register')
@@ -49,6 +50,10 @@ const Login = () => {
         } else {
             toast('please enter your email address!!')
         }
+    }
+
+    if (error) {
+        loginError = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     if (user) {
@@ -69,6 +74,7 @@ const Login = () => {
 
                 <button className='button-style' type="submit">Login</button>
             </Form>
+            <p>{loginError}</p>
             <p className='text-center mt-2'>Forget Password? <button className='btn btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <p className='text-center'>Are you new in Bicycle Warehouse Management? <Link to='/register' onClick={navigateRegister} className='text-primary text-decoration-none'>Register</Link></p>
             <SocialLogin></SocialLogin>

@@ -10,22 +10,18 @@ import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
 
     const [agree, setAgree] = useState(false)
-    console.log(agree)
 
     const [
         createUserWithEmailAndPassword,
-        user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
     const navigate = useNavigate();
+    let registerError;
 
     if (loading) {
         return <Loading></Loading>
-    }
-
-    if (user) {
-        console.log(user);
     }
 
     const handleSubmit = async event => {
@@ -33,9 +29,12 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(name, email, password)
         await createUserWithEmailAndPassword(email, password);
         navigate('/home')
+    }
+
+    if (error) {
+        registerError = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     return (
@@ -59,8 +58,9 @@ const Register = () => {
                     <label className={`ms-2 ${agree ? '' : 'text-danger'}`} for="checkbox"> Accept The Bicycle Warehouse Trams and Condition?</label>
                 </div>
 
-                <button disabled={!agree} className='button-style' type="submit">Login</button>
+                <button disabled={!agree} className='button-style' type="submit">Register</button>
             </Form>
+            <p>{registerError}</p>
             <p className='text-center'>Already registered? <Link to='/login' className='text-decoration-none'>Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
