@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/banner/banner1.jpg'
 import banner2 from '../../../images/banner/banner2.jpg'
 import banner3 from '../../../images/banner/banner3.jpeg'
 
 const Banner = () => {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    }
 
     return (
         <div>
@@ -21,8 +16,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>All Weather Conditions Suitable Bike</h3>
+                        <p>The All-weather bike is designed so that more people ride their bikes more often and sometimes leave their car behind.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
@@ -32,8 +27,8 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3> Sport Bike and Mountain Bike</h3>
+                        <p>If speed is the name of your game, then you need a bike that's nimble and agile and built to go fast.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
@@ -43,8 +38,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>Bike For All With Special Category</h3>
+                        <p>We provide our best to give best product and service for all age group. we also provide all types of featured bike.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
