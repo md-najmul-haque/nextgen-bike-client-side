@@ -1,9 +1,35 @@
+.contact-container {
+    background-image: url(../../../images/backgroundImage/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.service-container {
+    background-color: #dee4e7;
+    border-radius: 5px;
+    margin: 25px
+}
+
 .service-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin: 10px;
 
+}
+
+.section-sub-title {
+    color: #1c3766;
+    margin: 20px 0px;
+    font-weight: 700;
+}
+
+.service-section span {
+    color: #1c3766;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 .contact-us-heading {
