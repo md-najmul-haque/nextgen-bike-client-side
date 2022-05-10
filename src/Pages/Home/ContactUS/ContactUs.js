@@ -7,10 +7,10 @@ import './ContactUs.css'
 const ContactUs = () => {
     return (
 
-        <div className='contact-container'>
-            <h1 className='section-title'>WHY SHOULD YOU CONSIDER US?</h1>
+        <div id='contactus' className='bg-white service-container' >
+            <h1 className='section-title contact-title'>WHY SHOULD YOU CONSIDER US?</h1>
             <div className='d-flex justify-content-center alien-item-center flex-column flex-lg-row'>
-                <div className='w-75 mx-auto p-4 service-container container'>
+                <div className='mx-auto p-4 service-container'>
                     <div>
                         <h3 className='section-sub-title'>OUR SERVICES</h3>
                         <p>You might be surprised how awesome service we provide for your needs.</p>
@@ -35,7 +35,7 @@ const ContactUs = () => {
                     </div>
 
                 </div>
-                <div className='w-75 mx-auto p-4'>
+                <div className='mx-auto p-4 contact-form-container'>
                     <h3 className='contact-us-heading'>Contact Us</h3>
 
                     <div>
@@ -81,7 +81,6 @@ const ContactUs = () => {
                                     <Form.Control placeholder="Zip" />
                                 </Form.Group>
                             </Row>
-
 
                             <Form.Group className="mb-3 text-start" controlId="formGridAddress1">
 

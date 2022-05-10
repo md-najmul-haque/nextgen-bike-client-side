@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
             <hr />
             <div>
-                <p className='m-0'><small>All Rights Reserved by Developer. Copyright &copy; {today.getFullYear()}.</small></p>
+                <p className='m-0'><small>All Rights Reserved by The Developer - Najmul Haque. Copyright &copy; {today.getFullYear()}.</small></p>
             </div>
 
         </footer>

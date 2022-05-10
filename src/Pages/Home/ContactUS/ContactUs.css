@@ -1,11 +1,3 @@
-.contact-container {
-    background-image: url(../../../images/backgroundImage/3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-}
-
 .service-container {
     background-color: #dee4e7;
     border-radius: 5px;
@@ -32,6 +24,10 @@
     font-size: 22px;
 }
 
+.service-container .contact-form-container {
+    width: 75%;
+}
+
 .contact-us-heading {
     background-color: #1c3766;
     color: #FFFFFF;
@@ -44,4 +40,47 @@
 .contact-form {
     background-color: #dee4e7;
     padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .service-container .contact-form-container {
+        width: 100%;
+    }
+
+    .contact-title {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .service-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 10px;
+
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+
+    .service-container .contact-form-container {
+        width: 100%;
+    }
+
+    .contact-title {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .service-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 10px;
+
+    }
+
+
 }

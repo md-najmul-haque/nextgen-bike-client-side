@@ -12,7 +12,7 @@ const Inventories = () => {
         navigate('/ManageInventories')
     }
     return (
-        <div>
+        <div id='inventories'>
             <h1 className='section-title'>Our Products</h1>
             <div className='row g-5'>
                 {
