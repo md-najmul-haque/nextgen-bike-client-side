@@ -11,11 +11,11 @@ const Footer = () => {
                 <div className='useful-link'>
                     <h5>CATEGORIES</h5>
                     <ul>
-                        <li>Furniture</li>
-                        <li>Tables</li>
-                        <li>Seating</li>
-                        <li>Bed and Bath</li>
-                        <li>Desks and office</li>
+                        <li>Mountain Bike</li>
+                        <li>Cruiser Bike</li>
+                        <li>Folding Bike</li>
+                        <li>Balance Bike</li>
+                        <li>Kids Bike</li>
                     </ul>
                 </div>
                 <div className='useful-link'>
@@ -24,7 +24,7 @@ const Footer = () => {
                         <li>Innovative Designs</li>
                         <li>Long Lasting</li>
                         <li>Quick Shipment</li>
-                        <li>24/7 customer service</li>
+                        <li>Comparatively Low Price</li>
                         <li>24/7 customer service</li>
                     </ul>
                 </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                     <h5>COMPANY</h5>
                     <ul>
                         <li>About Bicycles Warehouse</li>
-                        <li>Furniture Care</li>
+                        <li>Bicycles Care</li>
                         <li>Offices &#38; Distributors</li>
                         <li>Support As Per Warranty policy</li>
                         <li>email: najmul0612@gmail.com</li>
