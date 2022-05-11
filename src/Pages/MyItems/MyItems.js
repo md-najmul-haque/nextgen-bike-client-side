@@ -13,7 +13,7 @@ const MyItems = () => {
     const handleButton = id => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://tranquil-eyrie-58575.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -31,7 +31,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/inventories?email=${email}`;
+            const url = `https://tranquil-eyrie-58575.herokuapp.com/inventories?email=${email}`;
             if (email) {
                 const { data } = await axios.get(url);
                 setInventories(data)
@@ -42,8 +42,8 @@ const MyItems = () => {
 
     return (
         <div className='container'>
-            <h2>Chosse Your Inventory</h2>
-            <div className='allitems-container'>
+            <h2 className='section-title'>Your added Product</h2>
+            <div className='all-items-container'>
                 {
                     inventories.map(inventory => <div key={inventory._id}>
                         <div className='all-items'>

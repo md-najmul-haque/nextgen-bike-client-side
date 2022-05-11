@@ -2,16 +2,18 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import auth from '../../../firebase.init';
 import logo from '../../../images/logo/logo.png'
 import './Header.css';
 
 const Header = () => {
     const [user] = useAuthState(auth)
+    const navigate = useNavigate()
 
     const handleSingOut = () => {
         signOut(auth);
+        navigate('/home')
     }
 
     return (
@@ -20,7 +22,7 @@ const Header = () => {
             <Navbar collapseOnSelect className='header-container' expand="lg" sticky='top' variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to='/'>
-                        <img className='brand-logo' src={logo} alt="" />
+                        <img className='brand-logo' src={logo} alt="" /><span>NextGen Bike</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

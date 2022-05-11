@@ -76,7 +76,7 @@ const Login = () => {
             </Form>
             <p>{loginError}</p>
             <p className='text-center mt-2'>Forget Password? <button className='btn btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
-            <p className='text-center'>Are you new in Bicycle Warehouse Management? <Link to='/register' onClick={navigateRegister} className='text-primary text-decoration-none'>Register</Link></p>
+            <p className='text-center'>Are you new in NextGen Bike? <Link to='/register' onClick={navigateRegister} className='text-primary text-decoration-none'>Register</Link></p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>

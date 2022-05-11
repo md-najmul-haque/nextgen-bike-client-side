@@ -32,7 +32,7 @@ const Footer = () => {
                 <div className='useful-link'>
                     <h5>COMPANY</h5>
                     <ul>
-                        <li>About Bicycles Warehouse</li>
+                        <li>About NextGen Bike</li>
                         <li>Bicycles Care</li>
                         <li>Offices &#38; Distributors</li>
                         <li>Support As Per Warranty policy</li>

@@ -8,6 +8,7 @@ import './AddInventory.css'
 const AddInventory = () => {
 
     const [user] = useAuthState(auth);
+    console.log(user)
     const email = user.email
 
     // here use react hook form to minimize data
@@ -16,7 +17,7 @@ const AddInventory = () => {
 
     const onSubmit = (data, e) => {
         const newData = { ...data, email };
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://tranquil-eyrie-58575.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -32,7 +33,7 @@ const AddInventory = () => {
     };
     return (
         <div className='w-50 mx-auto'>
-            <h3>Hi <span className="new-item-welcome-text">{user.displayName} ({user.email}).</span></h3>
+            <h3>Hi <span className="new-item-welcome-text"><span>{user?.displayName}</span> <span>({user?.email})</span></span></h3>
             <h4 className="new-item-welcome-text">Please add your new item.</h4>
 
             <form className='d-flex flex-column from-input' onSubmit={handleSubmit(onSubmit)}>
