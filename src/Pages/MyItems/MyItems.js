@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './MyItems.css';
@@ -43,16 +44,16 @@ const MyItems = () => {
     return (
         <div className='container'>
             <h2 className='section-title'>Your added Product</h2>
-            <div className='all-items-container'>
+            <div className='d-flex flex-column justify-content-center'>
                 {
                     inventories.map(inventory => <div key={inventory._id}>
-                        <div className='all-items'>
+                        <div className='d-flex justify-content-center'>
                             <div>
                                 <h5>{inventory.name}</h5>
-                                <p><small>price: {inventory.price}</small></p>
+                                <p>price: {inventory.price}</p>
                             </div>
                             <div>
-                                <button onClick={() => handleButton(inventory._id)}>Delete</button>
+                                <Button className='ms-5' variant="danger" onClick={() => handleButton(inventory._id)}>Delete</Button>{' '}
                             </div>
                         </div>
                     </div>)
