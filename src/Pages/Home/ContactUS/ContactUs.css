@@ -1,5 +1,5 @@
 .service-container {
-    background-color: #dee4e7;
+    background-color: #ebf0fa;
     border-radius: 5px;
     margin: 25px
 }
@@ -32,13 +32,12 @@
     background-color: #1c3766;
     color: #FFFFFF;
     padding: 10px 0px;
-    border-radius: 5px;
     margin-bottom: 0;
 
 }
 
 .contact-form {
-    background-color: #dee4e7;
+    background-color: #ebf0fa;
     padding: 20px;
 }
 
