@@ -40,7 +40,7 @@ const ManageInventories = () => {
                 {
                     inventories.map(inventory => <div className='col-sm-12 col-md-6 col-lg-4' key={inventory._id}>
                         <div className="card  shadow-lg p-3 mb-5 bg-white rounded">
-                            <img src={inventory.img} style={{ height: 450 }} className="card-img-top p-3 inventory-img" alt="..." />
+                            <img src={inventory.img} style={{ height: 400 }} className="card-img-top p-3 inventory-img" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title item-name">{inventory.name}</h5>
                                 <h6>Supplier Name: {inventory.supplier}</h6>
