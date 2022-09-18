@@ -14,7 +14,7 @@ const MyItems = () => {
     const handleButton = id => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            const url = `https://tranquil-eyrie-58575.herokuapp.com/inventory/${id}`;
+            const url = `https://nextgen-bike-server.vercel.app/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `https://tranquil-eyrie-58575.herokuapp.com/inventories?email=${email}`;
+            const url = `https://nextgen-bike-server.vercel.app/inventories?email=${email}`;
             if (email) {
                 const { data } = await axios.get(url);
                 setInventories(data)

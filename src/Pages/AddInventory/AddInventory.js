@@ -17,7 +17,7 @@ const AddInventory = () => {
 
     const onSubmit = (data, e) => {
         const newData = { ...data, email };
-        const url = `https://tranquil-eyrie-58575.herokuapp.com/inventory`;
+        const url = `https://nextgen-bike-server.vercel.app/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
