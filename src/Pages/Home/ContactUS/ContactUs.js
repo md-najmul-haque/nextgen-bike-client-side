@@ -1,10 +1,23 @@
 import React from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faGears, faPersonBiking, faTruckFast, faUsersGear } from '@fortawesome/free-solid-svg-icons'
+import { faGears, faPersonBiking, faTruckFast, faUsersGear } from '@fortawesome/free-solid-svg-icons'
 import './ContactUs.css'
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_t2yjpt7', 'template_m6usr6m', e.target, '05q1Ckj6xqf-KKHgb')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return (
 
         <div id='contactus' className='bg-white service-container' >
@@ -39,52 +52,47 @@ const ContactUs = () => {
                     <h3 className='contact-us-heading'>Contact Us</h3>
 
                     <div>
-                        <Form className='contact-form'>
+                        <Form onSubmit={sendEmail} className='contact-form'>
                             <Row className="mb-3 text-start">
                                 <Form.Group as={Col} controlId="formGridEmail">
-
-                                    <Form.Control type="text" placeholder="Your Name" />
+                                    <Form.Control type="text" placeholder="First Name" name='firstname' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridPassword">
-
-                                    <Form.Control type="text" placeholder="Your Phone Number" />
+                                <Form.Group as={Col} controlId="formGridEmail">
+                                    <Form.Control type="text" placeholder="Last Name" name='lastname' />
                                 </Form.Group>
                             </Row>
                             <Row className="mb-3 text-start">
                                 <Form.Group as={Col} controlId="formGridEmail">
-
-                                    <Form.Control type="email" placeholder="Enter email" />
+                                    <Form.Control type="email" placeholder="Enter email" name='email' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridPassword">
-
-                                    <Form.Control type="password" placeholder="Password" />
+                                <Form.Group as={Col} controlId="formGridEmail">
+                                    <Form.Control type="text" placeholder="Your Phone Number" name='phone' />
                                 </Form.Group>
                             </Row>
 
                             <Form.Group className="mb-3 text-start" controlId="formGridAddress1">
-
-                                <Form.Control placeholder="1234 Main St, Apartment" />
+                                <Form.Control placeholder="1234 Main St, Apartment" name='address' />
                             </Form.Group>
 
                             <Row className="mb-3 text-start">
                                 <Form.Group as={Col} controlId="formGridCity">
-                                    <Form.Control placeholder="City" />
+                                    <Form.Control placeholder="City" name='city' />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridCity">
-                                    <Form.Control placeholder="State" />
+                                    <Form.Control placeholder="State" name='state' />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridZip">
-                                    <Form.Control placeholder="Zip" />
+                                    <Form.Control placeholder="Zip" name='zipcode' />
                                 </Form.Group>
                             </Row>
 
                             <Form.Group className="mb-3 text-start" controlId="formGridAddress1">
 
-                                <Form.Control placeholder="Leave your message or what you want to buy from us?" />
+                                <Form.Control placeholder="Leave your message or what you want to buy from us?" name='message' />
                             </Form.Group>
 
                             <Form.Group className="mb-3 text-start" id="formGridCheckbox">
