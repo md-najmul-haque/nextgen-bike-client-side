@@ -4,7 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Shared/Loading/Loading';
 import './Login.css'
@@ -78,7 +78,7 @@ const Login = () => {
             <p className='text-center mt-2'>Forget Password? <button className='btn btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <p className='text-center'>Are you new in NextGen Bike? <Link to='/register' onClick={navigateRegister} className='text-primary text-decoration-none'>Register</Link></p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGears, faPersonBiking, faTruckFast, faUsersGear } from '@fortawesome/free-solid-svg-icons'
 import './ContactUs.css'
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const ContactUs = () => {
 
@@ -13,9 +14,14 @@ const ContactUs = () => {
         emailjs.sendForm('service_t2yjpt7', 'template_m6usr6m', e.target, '05q1Ckj6xqf-KKHgb')
             .then((result) => {
                 console.log(result.text);
+                e.target.reset()
+                toast.success('Thanks for sending email to us')
             }, (error) => {
                 console.log(error.text);
+                toast.error('Something went wrong. Please try again letter.')
             });
+
+
     };
 
     return (
