@@ -19,7 +19,7 @@ const ManageInventories = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? Do you want to delete?');
         if (proceed) {
-            const url = `https://nextgen-bike-server.vercel.app/inventory/${id}`;
+            const url = `https://nextgen-bike-server-production.up.railway.app/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

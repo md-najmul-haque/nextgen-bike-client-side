@@ -33,6 +33,7 @@ const Register = () => {
         await updateProfile({ displayName, email });
         navigate('/home')
         toast.success('Login Successful')
+
     }
 
     return (
