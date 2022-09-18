@@ -35,9 +35,8 @@ const Register = () => {
         toast.success('Login Successful')
     }
 
-
     return (
-        <div className='login'>
+        <div className='pb-5 my-5'>
             <h2 className='text-center mt-4'>Please Register</h2>
             <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
                 <Form.Group className="mb-3">
