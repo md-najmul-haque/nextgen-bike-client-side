@@ -17,7 +17,7 @@ const AddInventory = () => {
 
     const onSubmit = (data, e) => {
         const newData = { ...data, email };
-        const url = `https://nextgen-bike-server-production.up.railway.app/inventory`;
+        const url = `https://nextgen-bike-server.onrender.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {

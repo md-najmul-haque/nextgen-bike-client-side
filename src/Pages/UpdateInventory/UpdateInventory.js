@@ -8,7 +8,7 @@ const UpdateInventory = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const url = `https://nextgen-bike-server-production.up.railway.app/inventory/${id}`
+        const url = `https://nextgen-bike-server.onrender.com/inventory/${id}`
 
         fetch(url)
             .then(res => res.json())
@@ -35,7 +35,7 @@ const UpdateInventory = () => {
             sold: parseInt(inventory.sold) + 1
 
         };
-        const url = `https://nextgen-bike-server-production.up.railway.app/inventory/${id}`;
+        const url = `https://nextgen-bike-server.onrender.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -69,7 +69,7 @@ const UpdateInventory = () => {
             }
 
             // send data
-            const url = `https://nextgen-bike-server-production.up.railway.app/inventory/${id}`;
+            const url = `https://nextgen-bike-server.onrender.com/inventory/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
