@@ -36,7 +36,7 @@ const ManageInventories = () => {
     return (
         <div>
             <h2 className='section-title'>Our All Items</h2>
-            <div className='row'>
+            <div className='row g-5 px-5'>
                 {
                     inventories.map(inventory => <div className='col-sm-12 col-md-6 col-lg-4' key={inventory._id}>
                         <div className="card  shadow-lg p-3 mb-5 bg-white rounded">
@@ -47,11 +47,11 @@ const ManageInventories = () => {
                                 <p className="card-text">
                                     Product Description: {inventory.description}
                                 </p>
-                                <p>Brand:{inventory.brand}</p>
-                                <p>Size: {inventory.size}</p>
-                                <p>price: ${inventory.price}</p>
-                                <p>In stock: {inventory.quantity}</p>
-                                <p>Sold: {inventory.sold}</p>
+                                <p className='mb-0'>Brand:{inventory.brand}</p>
+                                <p className='mb-0'>Size: {inventory.size}</p>
+                                <p className='mb-0'>price: ${inventory.price}</p>
+                                <p className='mb-0'>In stock: {inventory.quantity}</p>
+                                <p className='mb-0'>Sold: {inventory.sold}</p>
                                 <button onClick={() => navigateToUpdate(inventory._id)} className='button-style'>Update</button>
                                 <button onClick={() => handleDelete(inventory._id)} className='button-style'>Delete</button>
                             </div>
