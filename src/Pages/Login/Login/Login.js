@@ -64,7 +64,7 @@ const Login = () => {
     return (
         <div className='pb-5 my-5'>
             <h2 className='text-center mt-5'>Please Login</h2>
-            <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
+            <Form onSubmit={handleSubmit} className='mx-auto' style={{ width: 370 }}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
