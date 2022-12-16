@@ -11,9 +11,9 @@ const Inventory = ({ inventory }) => {
     }
 
     return (
-        <div className="col-sm-12 col-md-6 col-lg-4 px-5">
+        <div className="col-sm-12 col-md-6 col-lg-4 gap-5">
             <div className="card shadow-lg p-3 mb-5 bg-white rounded-lg">
-                <img src={img} style={{ height: 320, width: 370 }} className="card-img-top p-3 mx-auto inventory-img" alt="..." />
+                <img src={img} style={{ height: 350 }} className="card-img-top py-3 px-5 mx-auto inventory-img" alt="..." />
                 <div>
                     <h5 className="card-title item-name" >{name}</h5>
                     <h6>Supplier Name: {supplier}</h6>
