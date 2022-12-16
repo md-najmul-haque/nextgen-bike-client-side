@@ -6,7 +6,6 @@ const Inventory = ({ inventory }) => {
     const navigate = useNavigate()
 
     const navigateToUpdate = id => {
-
         navigate(`/inventory/${id}`)
 
     }

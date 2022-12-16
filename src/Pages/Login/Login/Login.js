@@ -40,7 +40,6 @@ const Login = () => {
 
     const navigateRegister = () => {
         navigate('/register')
-        toast.success('Logged in successfully')
     }
 
     const resetPassword = async () => {

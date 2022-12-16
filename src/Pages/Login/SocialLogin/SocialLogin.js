@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './SocialLogin.css'
 import { FcGoogle } from 'react-icons/fc'
 import { BsGithub } from 'react-icons/bs'
-import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {

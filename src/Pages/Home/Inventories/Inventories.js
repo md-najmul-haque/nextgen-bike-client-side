@@ -1,12 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
 import Inventory from '../Inventory/Inventory'
 import './Inventories.css'
 
 const Inventories = () => {
-    const [inventories, setInventories] = useInventories()
+    const [inventories] = useInventories()
     const navigate = useNavigate()
 
     console.log(inventories)
